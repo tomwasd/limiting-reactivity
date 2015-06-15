@@ -1,0 +1,19 @@
+<body>
+  {{>list}}
+</body>
+
+<template name="list">
+	<ul>
+	  {{#each items}}
+	  	<li>
+	  		{{>item}}
+	  	</li>
+	  {{/each}}
+	</ul>
+</template>
+
+<template name="item">
+	{{#with item}}
+		{{title}} - {{rank}}
+	{{/with}}
+</template>
